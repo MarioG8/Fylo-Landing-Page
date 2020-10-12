@@ -1,0 +1,49 @@
+.features {
+    
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6vw 10vw;
+        margin: 0 auto;
+
+        @include breakpoint(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint(large){
+            gap: 7vw 7vw;
+
+        }
+    }
+
+
+    .feature{
+        text-align: center;
+
+
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            margin-bottom: 30px;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    
+        &-title {
+            font-family: $font-title;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    
+        &-desc {
+            font-size: 1rem;
+        }
+    }
+}

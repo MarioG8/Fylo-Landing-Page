@@ -1,0 +1,53 @@
+.footer {
+    background-color: $footerBg;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "address" "contact" "links1" "links2" "social";
+                        
+
+    @include breakpoint(large) {
+        grid-template-columns: 2fr repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "logo logo logo logo logo"
+                            "address contact links1 links2 social";
+    }
+
+    &__logo {
+        @include breakpoint(large){
+            // grid-column: 1 / 7;
+            grid-area: logo;
+        }
+        
+    }
+    &__address {
+        grid-area: address;
+
+    }
+    &__contact {
+        grid-area: contact;
+        &-phone {
+
+        }
+        &-email {
+
+        }
+
+    }
+
+    &__links1,
+    &__links2 {
+
+    }
+    &__links1 {
+        grid-area: links1;
+    }
+    &__links2 {
+        grid-area: links2;
+    }
+    &__social {
+        grid-area: social;
+        i {
+            font-size: 2em;
+        }
+    }
+}
